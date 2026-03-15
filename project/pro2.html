@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png"  href="image.png">
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: transparent;
+            border-radius: 20px;
+            border: red solid 0.2rem;
+            color: red;
+            cursor: pointer;
+            transition: backgroud-color,
+            color 0.15s;
+        }
+        button:hover {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        button:active {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+   <div>
+    <button onclick="
+alert(`quart: ${cart}`)
+    ">show quart</button>
+
+<button onclick="
+cart = cart + 1;
+alert(`quart: ${cart}`);
+">add quart</button>
+
+<button onclick="
+cart = cart + 3;
+alert(`quart: ${cart}`);
+">+3</button>
+
+<button onclick="
+cart = cart + 4;
+alert(`quart: ${cart}`);
+">+4</button>
+
+<button onclick="
+cart = 0;
+alert(`cart was reset \n quart: ${cart}`);
+
+
+">Rest</button>
+   </div>
+  
+    <script>
+        let cart = 0;
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="apple.png">
+    <style>
+      body {
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      div {
+        background-color: black;
+        padding: 20px 50px;
+        border-radius: 20px;
+
+      }
+      button, .button {
+        padding: 15px 20px;
+        border-radius: 50px;
+        color: white;
+        background-color: rgb(51, 51, 51);
+        border: none;
+        font-size: 26px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      button:active {
+        opacity: 0.6;
+      }
+      .button:active {
+
+        opacity: 0.6;
+      }
+      .button {
+        background-color:  rgb(254, 160, 10);
+      
+      }
+    </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+   <div>
+    <P>
+        <button onclick="
+            cal += '1';
+            console.log(cal); 
+            "
+        
+        >1</button>
+        <button onclick="
+        cal += '2';
+        console.log(cal); 
+        ">2</button>
+        
+        <button onclick="
+        cal += '3';
+        console.log(cal); 
+        ">3</button>
+        <button onclick="
+        cal += '+';
+        console.log(cal); 
+        " class="button">+</button>
+    </P>
+    <P>
+        <button onclick="
+        cal += '4';
+        console.log(cal); 
+        ">4</button>
+        <button onclick="
+        cal += '5';
+        console.log(cal); 
+        ">5</button>
+        <button onclick="
+        cal += '6';
+        console.log(cal); 
+        ">6</button>
+        <button onclick="
+        cal += '-';
+        console.log(cal); 
+        " class="button">-</button>
+    </P>
+    <P>
+        <button onclick="
+        cal += '7';
+        console.log(cal); 
+        ">7</button>
+        <button onclick="
+        cal += '8';
+        console.log(cal); 
+        "> 8</button>
+        <button onclick="
+        cal += '9';
+        console.log(cal); 
+        ">9</button>
+        <button onclick="
+        cal += '*';
+        console.log(cal); 
+        " class="button">*</button>
+    </P>
+    <P>
+        <button onclick="
+        cal += '0';
+        console.log(cal); 
+        ">0</button>
+        <button onclick="
+        cal += '.';
+        console.log(cal); 
+        " >.</button>
+        <button onclick="
+       
+        
+        cal = eval(cal);
+        console.log(cal); 
+        ">=</button>
+        <button onclick="
+        cal += '/';
+        console.log(cal); 
+        " class="button">/</button>
+    </P>
+    <button onclick="
+    cal = '';
+    console.log(`cleard`);
+    console.log(cal); 
+    ">clear</button>
+   </div>
+    <script>
+        let cal = ''; 
+           </script>
+</body>
+</html>

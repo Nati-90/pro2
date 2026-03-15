@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language originter</title>
+    <Link rel="icon" type="icon/png" href="image.png">
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            
+            }
+            section {
+                display: flex;
+                
+                flex-direction: column;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                width: 400px;
+               
+                padding: 20px;
+                border-radius: 20px;
+                padding: 20px;
+            }
+        
+        
+           p, h2 {
+            text-align: center;
+           }
+           button {
+            background-color: rgb(0, 115, 255);
+            color: white;
+            border: none;
+            height: 40px;
+            width: 80px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: margin-top 0.3s;
+           }
+           button:hover {
+            margin-top: 10px;
+           }
+           button:active {
+            opacity: 0.6;
+           }
+           .Language {
+            display: flex;
+            flex-direction: column;
+            
+           }
+           .Language-container{
+             display: flex;
+             flex-direction: row;
+             gap: 20px;
+           }
+           h6 {
+           margin-left: auto;
+           }
+        </style>
+</head>
+<body>
+    <section>
+       <marquee> <h1>Language originter</h1></marquee>
+      <p>Click the Languages to know their orign place<strong>(It will be shown in the pop up massage)</strong> </p>
+      <div class="Language-container">
+        <div class="Language"> 
+            <button onclick="
+             Language = 'United kingdom';
+             alert(`It is orginted from ${Language} `);
+            " >English </button>
+            <button onclick="
+            Language = 'Ethiopia'
+            alert(`It is orginted from ${Language} `);
+            ">Amharic</button>
+            <button onclick="
+            Language = 'spain';
+            alert(`It is orginted from ${Language} `);
+            ">Spanish</button>
+            <button onclick="
+            Language = 'Holland';
+            alert(`It is orginted from ${Language} `);
+            ">Dutch</button>
+            <button onclick="
+            Language = 'portugal';
+            alert(`It is orginted from ${Language} `);
+            ">portugese</button>
+            
+           
+        </div>
+
+        <div class="Language"> 
+            <button onclick="
+             Language = 'france';
+             alert(`It is orginted from ${Language} `);
+            " >french </button>
+            <button onclick="
+            Language = 'china'
+            alert(`It is orginted from ${Language} `);
+            ">Mandarin Chinese</button>
+            <button onclick="
+            Language = 'North India';
+            alert(`It is orginted from ${Language} `);
+            ">Hindi</button>
+            <button onclick="
+            Language = 'Japan';
+            alert(`It is orginted from ${Language} `);
+            ">Japanese</button>
+            <button onclick="
+            Language = 'persia';
+            alert(`It is orginted from ${Language} `);
+            ">Persian</button>
+            
+           
+        </div>
+        <div class="Language"> 
+            <button onclick="
+             Language = 'Horn of Africa';
+             alert(`It is orginted from ${Language} `);
+            " >Somali </button>
+            <button onclick="
+            Language = 'East Africa'
+            alert(`It is orginted from ${Language} `);
+            ">Swahili</button>
+            <button onclick="
+            Language = 'Germany';
+            alert(`It is orginted from ${Language} `);
+            ">German</button>
+            <button onclick="
+            Language = 'Holland';
+            alert(`It is orginted from ${Language} `);
+            ">Dutch</button>
+            <button onclick="
+            Language = 'portugal';
+            alert(`It is orginted from ${Language} `);
+            ">portugese</button>
+            
+           
+        </div>
+
+        <div class="Language"> 
+            <button onclick="
+             Language = 'United kingdom';
+             alert(`It is orginted from ${Language} `);
+            " >English </button>
+            <button onclick="
+            Language = 'Ethiopia'
+            alert(`It is orginted from ${Language} `);
+            ">Amharic</button>
+            <button onclick="
+            Language = 'spain';
+            alert(`It is orginted from ${Language} `);
+            ">Spanish</button>
+            <button onclick="
+            Language = 'Holland';
+            alert(`It is orginted from ${Language} `);
+            ">Dutch</button>
+            <button onclick="
+           say('portugal');
+            ">portugese</button>
+            
+           
+        </div>
+      </div>
+
+       <h6 class="p">Created by nati</h6>
+    </section>
+    <script>
+        let Language =''
+        function say(Language) {
+            
+            alert(`It is orginted from ${Language} `);
+        }
+    </script>
+</body>
+</html>

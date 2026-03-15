@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>age checker</p>
+    <input type="text" class="input" onkeypress="
+    if(event.key === 'Enter') {
+      check();
+    }    
+    " placeholder="enter your age">
+    <button onclick="
+    check();
+    ">check</button>
+    <p class="wow"></p>
+    <script>
+        function check() {
+            
+            const age = document.querySelector('.input');
+             const wow = document.querySelector('.wow')
+            let age2 = Number(age.value)
+            if(age2 < 18) {
+                wow.innerHTML = "You are ፈላ እደግ መጀመሪያ";
+            } 
+            else if(age2>=18 && age2 <= 60) {
+                wow.innerHTML = "wow good አንተ ትልክ baby";
+            } else if (age2 === NaN) {
+                wow.innerHTML = "please enter a valid number";
+            } else if(isNaN(age2)) {
+                wow.innerHTML = "please enter a valid number(እባክሆ ትክክለኝ ቁጥር ያስገቡ)";
+            } else if(age2 > 60 && age2 <= 120) {
+                wow.innerHTML = "you are old አንተ የሽማግሌ ሰው ነህ";
+            } else if(age2 > 120) {
+                wow.innerHTML = "you are not human አንተ ሰው አልሆንህ";
+            }
+        }
+    </script>
+</body>
+</html>

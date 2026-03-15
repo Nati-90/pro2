@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+          display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: rgb(40, 40, 154);
+      }
+      div {
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+     
+       background: white;
+              padding: 2rem;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              width: 100%;
+              max-width: 350px;
+              text-align: center;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);         
+                -webkit-backdrop-filter: blur(20px); 
+                border: 1px solid rgba(255, 255, 255, 0.3); 
+      }
+      input {
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 5px;
+      }
+    </style>
+</head>
+<body>
+  <div>
+      <h2>password requirment cheker</h2>
+    <input type="text" class="text" placeholder="enter your password" onkeydown="
+    if(event.key === 'Enter') {
+      check();
+    }
+    ">
+    <button onclick="
+      check();    
+    ">check</button>
+    <p class="result"></p>
+  </div>
+    <script>
+        function check() {
+       const text = document.querySelector('.text');
+       let password = text.value;
+       const result = document.querySelector('.result');
+       if(password.length < 8) {
+         result.innerHTML = 'password must be at least 8 characters long';
+       } else if (password.length>20) {
+          result.innerHTML = 'password must be less than 20 characters long';
+       } else if (!/[A-Z]/.test(password) ) {
+          result.innerHTML = 'password must include at least one upper case'
+       } else if (!/[a-z]/.test(password) ) {
+          result.innerHTML = 'password must include at least one lower case'
+       } else if (!/[^A-Za-z0-9]/.test(password) ) {
+          result.innerHTML = 'password must include at least one special character (e.g. !@#$%^&*)';
+       }else if(!/[0-9]/.test(password)) {
+          result.innerHTML = 'password must include at least one number';
+       }else {
+         result.innerHTML = "your password is fine \ <h3 style='color:green'>Good</h3> \ <p style='color:red;' >but this site only chcek if the password has number,uppercase,lowercase,special characters,password length</p>";
+       }
+    }
+         </script>
+</body>
+</html>
